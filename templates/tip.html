@@ -1,0 +1,17 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <form method="POST">
+        <label>Bill amount: <input type="number" name="bill" step="0.01" required></label><br><br>
+        <label>Tip percentage: <input type="number" name="tip" required></label><br><br>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if total is not none %}
+        <h2>Total including tip: ${{ total }}</h2>
+    {% endif %}
+</body>
+</html>
